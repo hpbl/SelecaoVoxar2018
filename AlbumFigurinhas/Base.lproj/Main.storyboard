@@ -7,11 +7,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
             <string>AmericanTypewriter-Semibold</string>
         </array>
     </customFonts>
@@ -32,35 +34,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="i1Y-8b-IAA">
-                                <rect key="frame" x="31" y="213" width="100" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="i1Y-8b-IAA">
+                                <rect key="frame" x="20" y="84" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="i1Y-8b-IAA" secondAttribute="height" multiplier="1:1" id="gMh-Tt-a1v"/>
+                                </constraints>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="a6T-jc-wwq">
-                                <rect key="frame" x="204" y="213" width="100" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="a6T-jc-wwq">
+                                <rect key="frame" x="180" y="84" width="120" height="120"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="vvA-du-8ns">
-                                <rect key="frame" x="31" y="380" width="100" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="vvA-du-8ns">
+                                <rect key="frame" x="20" y="384" width="120" height="120"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="ozX-Fn-WKm">
-                                <rect key="frame" x="204" y="380" width="100" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="ozX-Fn-WKm">
+                                <rect key="frame" x="180" y="384" width="120" height="120"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-3Y-VV7">
-                                <rect key="frame" x="31" y="61" width="165" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-3Y-VV7">
+                                <rect key="frame" x="0.0" y="30" width="320" height="46.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="40"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="awI-NJ-NLw">
-                                <rect key="frame" x="204" y="61" width="100" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptySticker" translatesAutoresizingMaskIntoConstraints="NO" id="awI-NJ-NLw">
+                                <rect key="frame" x="100" y="234" width="120" height="120"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlG-RW-Itb">
+                                <rect key="frame" x="137" y="516" width="46" height="32"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.67318367960000003" green="0.1007020921" blue="0.005816161167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dnW-3Y-VV7" firstAttribute="centerX" secondItem="SxW-2c-Rxi" secondAttribute="centerX" id="3BE-mv-9Eg"/>
+                            <constraint firstItem="awI-NJ-NLw" firstAttribute="top" secondItem="i1Y-8b-IAA" secondAttribute="bottom" constant="30" id="6NG-dh-gtB"/>
+                            <constraint firstItem="awI-NJ-NLw" firstAttribute="height" secondItem="i1Y-8b-IAA" secondAttribute="height" id="FoN-g7-gW1"/>
+                            <constraint firstItem="vvA-du-8ns" firstAttribute="top" secondItem="awI-NJ-NLw" secondAttribute="bottom" constant="30" id="Gnt-eh-tZQ"/>
+                            <constraint firstItem="awI-NJ-NLw" firstAttribute="centerX" secondItem="SxW-2c-Rxi" secondAttribute="centerX" id="HFv-Ym-I6x"/>
+                            <constraint firstItem="ozX-Fn-WKm" firstAttribute="trailing" secondItem="a6T-jc-wwq" secondAttribute="trailing" id="J8Q-4d-LPP"/>
+                            <constraint firstItem="OlG-RW-Itb" firstAttribute="centerX" secondItem="SxW-2c-Rxi" secondAttribute="centerX" id="KPf-v7-FqA"/>
+                            <constraint firstItem="awI-NJ-NLw" firstAttribute="width" secondItem="i1Y-8b-IAA" secondAttribute="width" id="Kt8-LD-XBz"/>
+                            <constraint firstItem="SxW-2c-Rxi" firstAttribute="bottom" secondItem="OlG-RW-Itb" secondAttribute="bottom" constant="20" id="MUj-eq-7Dk"/>
+                            <constraint firstItem="a6T-jc-wwq" firstAttribute="top" secondItem="i1Y-8b-IAA" secondAttribute="top" id="Q0o-4P-WCq"/>
+                            <constraint firstItem="dnW-3Y-VV7" firstAttribute="top" secondItem="SxW-2c-Rxi" secondAttribute="top" constant="10" id="Qy9-GF-l4R"/>
+                            <constraint firstItem="awI-NJ-NLw" firstAttribute="centerY" secondItem="SxW-2c-Rxi" secondAttribute="centerY" id="SmD-8e-hJr"/>
+                            <constraint firstItem="dnW-3Y-VV7" firstAttribute="width" secondItem="d4q-RQ-8Vk" secondAttribute="width" id="T9t-cx-wnj"/>
+                            <constraint firstItem="SxW-2c-Rxi" firstAttribute="trailing" secondItem="a6T-jc-wwq" secondAttribute="trailing" constant="20" id="XLZ-1Z-8oO"/>
+                            <constraint firstItem="ozX-Fn-WKm" firstAttribute="height" secondItem="i1Y-8b-IAA" secondAttribute="height" id="Y0C-B4-rM6"/>
+                            <constraint firstItem="a6T-jc-wwq" firstAttribute="height" secondItem="i1Y-8b-IAA" secondAttribute="height" id="dHe-Zz-CTo"/>
+                            <constraint firstItem="a6T-jc-wwq" firstAttribute="width" secondItem="i1Y-8b-IAA" secondAttribute="width" id="djv-FY-X3q"/>
+                            <constraint firstItem="vvA-du-8ns" firstAttribute="height" secondItem="i1Y-8b-IAA" secondAttribute="height" id="kiA-OB-IaB"/>
+                            <constraint firstItem="vvA-du-8ns" firstAttribute="leading" secondItem="i1Y-8b-IAA" secondAttribute="leading" id="l8f-aD-a1m"/>
+                            <constraint firstItem="ozX-Fn-WKm" firstAttribute="top" secondItem="vvA-du-8ns" secondAttribute="top" id="lmT-gd-s8d"/>
+                            <constraint firstItem="ozX-Fn-WKm" firstAttribute="width" secondItem="i1Y-8b-IAA" secondAttribute="width" id="rbu-u7-Sg5"/>
+                            <constraint firstItem="i1Y-8b-IAA" firstAttribute="width" relation="greaterThanOrEqual" secondItem="d4q-RQ-8Vk" secondAttribute="width" multiplier="0.3" id="tYn-HS-WCB"/>
+                            <constraint firstItem="vvA-du-8ns" firstAttribute="width" secondItem="i1Y-8b-IAA" secondAttribute="width" id="ynm-hN-iuQ"/>
+                            <constraint firstItem="i1Y-8b-IAA" firstAttribute="leading" secondItem="SxW-2c-Rxi" secondAttribute="leading" constant="20" id="zzT-56-EFg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SxW-2c-Rxi"/>
                     </view>
                     <connections>
