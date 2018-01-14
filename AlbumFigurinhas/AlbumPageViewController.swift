@@ -66,8 +66,8 @@ extension AlbumPageViewController: UIPageViewControllerDataSource {
             
             let previousIndex = viewControllerIndex - 1
             
-            // loop
-            guard previousIndex >= 0 else { return pages.last }
+            // prevent loop
+            guard previousIndex >= 0 else { return nil }
             
             guard pages.count > previousIndex else { return nil }
             
@@ -85,8 +85,8 @@ extension AlbumPageViewController: UIPageViewControllerDataSource {
             
             let nextIndex = viewControllerIndex + 1
             
-            // loop
-            guard nextIndex < pages.count else { return pages.first }
+            // prevet loop
+            guard nextIndex < pages.count else { return nil }
             
             guard pages.count > nextIndex else { return nil }
             
