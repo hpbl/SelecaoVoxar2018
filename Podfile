@@ -7,5 +7,6 @@ target 'AlbumFigurinhas' do
 
   # Pods for AlbumFigurinhas
   pod 'SimpleImageViewer', '~> 1.1.1'
+  pod 'Cheers'
 
 end

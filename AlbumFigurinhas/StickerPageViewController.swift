@@ -8,6 +8,7 @@
 
 import UIKit
 import SimpleImageViewer
+import Cheers
 
 class StickerPageViewController: UIViewController {
     
@@ -16,11 +17,25 @@ class StickerPageViewController: UIViewController {
     
     var stickerPack: StickerPack!
     
+    lazy var cheerView: CheerView = {
+        let cheerView = CheerView()
+        self.view.addSubview(cheerView)
+        return cheerView
+    }()
+    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.presentStickers()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        cheerView.frame = view.bounds
+    }
+    
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -128,8 +143,19 @@ class StickerPageViewController: UIViewController {
                 
                 StickerDataProvider.shared.save(sticker: sticker)
                 
+                self.celebrate()
+                
                 return
             }
+        }
+    }
+    
+    private func celebrate() {
+        self.cheerView.start()
+        
+        DispatchQueue.main.asyncAfter(
+        deadline: DispatchTime.now() + 2) {
+            self.cheerView.stop()
         }
     }
     
