@@ -72,7 +72,7 @@ class StickerPageViewController: UIViewController {
             
             imageView.image = sticker.found
                 ? sticker.image
-                : sticker.image.overlayed(with: #imageLiteral(resourceName: "emptySticker"))
+                : sticker.image.overlayed(with: #imageLiteral(resourceName: "emptySticker").alpha(0.9))
         }
     }
     
