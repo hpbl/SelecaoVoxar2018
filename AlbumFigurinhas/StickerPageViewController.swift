@@ -67,9 +67,15 @@ class StickerPageViewController: UIViewController {
     
     private func updateStickerImages() {
         for index in 0..<self.stickersImageView.count {
-            let sticker = self.stickerPack.stickers[index]
-            let imageView = self.stickersImageView[index]
+            var sticker = self.stickerPack.stickers[index]
             
+            if let fetchedSticker = StickerDataProvider.shared.fetchSticker(
+                    titled: sticker.title
+                ) {
+                sticker = fetchedSticker
+            }
+            
+            let imageView = self.stickersImageView[index]
             imageView.image = sticker.found
                 ? sticker.image
                 : sticker.image.overlayed(with: #imageLiteral(resourceName: "emptySticker").alpha(0.9))
@@ -108,6 +114,8 @@ class StickerPageViewController: UIViewController {
             if self.stickerPack.stickers[index] === sticker {
                 self.stickersImageView[index].image = sticker.image
                 sticker.found = true
+                
+                StickerDataProvider.shared.save(sticker: sticker)
                 
                 return
             }

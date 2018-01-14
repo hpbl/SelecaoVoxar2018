@@ -49,4 +49,32 @@ class StickerDataProvider {
             stickers: stickers
         )
     }
+    
+    
+    // MARK: - Saving sticker
+    func save(sticker: Sticker) {
+        let encodedSticker = NSKeyedArchiver.archivedData(
+            withRootObject: sticker
+        )
+        UserDefaults.standard.set(
+            encodedSticker,
+            forKey: sticker.title
+        )
+    }
+    
+    
+    // MARK: - Fetching found sticker
+    func fetchSticker(titled: String) -> Sticker? {
+        guard let stickerData =
+            UserDefaults.standard.data(forKey: titled) else {
+            return nil
+        }
+        
+        guard let sticker = NSKeyedUnarchiver.unarchiveObject(
+            with: stickerData) as? Sticker else {
+                fatalError("Expected data to be Sticker")
+        }
+        
+        return sticker
+    }
 }
