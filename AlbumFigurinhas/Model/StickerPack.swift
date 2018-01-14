@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct StickerPack {
+class StickerPack {
     var title: String
     var stickers: [Sticker]
+    
+    init(title: String, stickers: [Sticker]) {
+        self.title = title
+        self.stickers = stickers
+    }
 }

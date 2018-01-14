@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61A97862D2CEE66CEFEDA386 /* Pods_AlbumFigurinhas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64E6F0C610439E63CB7E7B /* Pods_AlbumFigurinhas.framework */; };
 		718433331FFB0D72006307A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718433321FFB0D72006307A1 /* AppDelegate.swift */; };
 		718433351FFB0D72006307A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718433341FFB0D72006307A1 /* ViewController.swift */; };
 		718433381FFB0D72006307A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718433361FFB0D72006307A1 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		444623A50FE3E4BFABECF38D /* Pods-AlbumFigurinhas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbumFigurinhas.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlbumFigurinhas/Pods-AlbumFigurinhas.release.xcconfig"; sourceTree = "<group>"; };
 		7184332F1FFB0D72006307A1 /* AlbumFigurinhas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumFigurinhas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		718433321FFB0D72006307A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		718433341FFB0D72006307A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		718433591FFB21DD006307A1 /* StickerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerDataProvider.swift; sourceTree = "<group>"; };
 		7184335C1FFB36EA006307A1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7184335E1FFB4757006307A1 /* StickerResearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerResearcher.swift; sourceTree = "<group>"; };
+		7B64E6F0C610439E63CB7E7B /* Pods_AlbumFigurinhas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlbumFigurinhas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E836C4E4BBC5220C53607D /* Pods-AlbumFigurinhas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbumFigurinhas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlbumFigurinhas/Pods-AlbumFigurinhas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,22 @@
 				7184334A1FFB0E38006307A1 /* CoreMedia.framework in Frameworks */,
 				718433481FFB0E26006307A1 /* AVFoundation.framework in Frameworks */,
 				718433451FFB0E05006307A1 /* opencv2.framework in Frameworks */,
+				61A97862D2CEE66CEFEDA386 /* Pods_AlbumFigurinhas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1924B8C2BAF7F9E00EA47668 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87E836C4E4BBC5220C53607D /* Pods-AlbumFigurinhas.debug.xcconfig */,
+				444623A50FE3E4BFABECF38D /* Pods-AlbumFigurinhas.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		718433261FFB0D72006307A1 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +83,7 @@
 				718433301FFB0D72006307A1 /* Products */,
 				718433441FFB0E05006307A1 /* opencv2.framework */,
 				718433461FFB0E25006307A1 /* Frameworks */,
+				1924B8C2BAF7F9E00EA47668 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +119,7 @@
 			children = (
 				718433491FFB0E38006307A1 /* CoreMedia.framework */,
 				718433471FFB0E26006307A1 /* AVFoundation.framework */,
+				7B64E6F0C610439E63CB7E7B /* Pods_AlbumFigurinhas.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 718433411FFB0D72006307A1 /* Build configuration list for PBXNativeTarget "AlbumFigurinhas" */;
 			buildPhases = (
+				A08838622378C0BB01872425 /* [CP] Check Pods Manifest.lock */,
 				7184332B1FFB0D72006307A1 /* Sources */,
 				7184332C1FFB0D72006307A1 /* Frameworks */,
 				7184332D1FFB0D72006307A1 /* Resources */,
+				F6FB4FD2973CD87DC3F783D9 /* [CP] Embed Pods Frameworks */,
+				1FDB3A117F6E1A68C78D1F5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +222,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FDB3A117F6E1A68C78D1F5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlbumFigurinhas/Pods-AlbumFigurinhas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A08838622378C0BB01872425 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlbumFigurinhas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6FB4FD2973CD87DC3F783D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AlbumFigurinhas/Pods-AlbumFigurinhas-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SimpleImageViewer/SimpleImageViewer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageViewer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlbumFigurinhas/Pods-AlbumFigurinhas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7184332B1FFB0D72006307A1 /* Sources */ = {
@@ -353,6 +426,7 @@
 		};
 		718433421FFB0D72006307A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E836C4E4BBC5220C53607D /* Pods-AlbumFigurinhas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -375,6 +449,7 @@
 		};
 		718433431FFB0D72006307A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 444623A50FE3E4BFABECF38D /* Pods-AlbumFigurinhas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

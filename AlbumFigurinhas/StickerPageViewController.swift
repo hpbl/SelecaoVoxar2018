@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleImageViewer
 
 class StickerPageViewController: UIViewController {
     
@@ -67,16 +68,7 @@ class StickerPageViewController: UIViewController {
     
     private func updateStickerImages() {
         for index in 0..<self.stickersImageView.count {
-            var sticker = self.stickerPack.stickers[index]
-            
-            if let fetchedSticker = StickerDataProvider.shared.fetchSticker(
-                    titled: sticker.title
-                ) {
-                sticker = fetchedSticker
-                
-            } else {
-                sticker.found = false
-            }
+            let sticker = self.stickerPack.stickers[index]
             
             let imageView = self.stickersImageView[index]
             
@@ -99,14 +91,29 @@ class StickerPageViewController: UIViewController {
             if tappedView == self.stickersImageView[index] {
                 
                 let sticker = self.stickerPack.stickers[index]
-                self.look(for: sticker)
+                
+                if sticker.found {
+                    let configuration = ImageViewerConfiguration {
+                        config in
+                        config.imageView = tappedView
+                    }
+                    
+                    let imageViewerController = ImageViewerController(
+                        configuration: configuration
+                    )
+                    
+                    self.present(
+                        imageViewerController,
+                        animated: true
+                    )
+                } else {
+                    self.look(for: sticker)
+                }
             }
         }
     }
     
-    private func look(for sticker: Sticker) {
-        guard !sticker.found else { return }
-        
+    private func look(for sticker: Sticker) {        
         self.performSegue(
             withIdentifier: "lookForSticker",
             sender: sticker

@@ -37,9 +37,12 @@ class StickerDataProvider {
         var stickers = [Sticker]()
         
         for index in 1...5 {
-            let sticker = Sticker(
-                title: "\(named)-\(index)",
-                image: UIImage(named: "\(named)-\(index)")!
+            let title = "\(named)-\(index)"
+
+            let sticker = self.fetchSticker(titled: title)
+                ?? Sticker(
+                    title: title,
+                    image: UIImage(named: "\(named)-\(index)")!
             )
             stickers.append(sticker)
         }
@@ -81,10 +84,18 @@ class StickerDataProvider {
     
     // MARK: - Reset
     func resetSavedStickers(completion: () -> ()) {
+        // Reset user defaults
         let domain = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: domain)
         UserDefaults.standard.synchronize()
 
+        // resetting locally to avoid loading again
+        self.packs.forEach { pack in
+            pack.stickers.forEach { sticker in
+                sticker.found = false
+            }
+        }
+        
         completion()
     }
 }
