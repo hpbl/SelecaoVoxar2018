@@ -88,6 +88,7 @@
 				718433321FFB0D72006307A1 /* AppDelegate.swift */,
 				718433341FFB0D72006307A1 /* ViewController.swift */,
 				718433361FFB0D72006307A1 /* Main.storyboard */,
+				7184333B1FFB0D72006307A1 /* LaunchScreen.storyboard */,
 				718433391FFB0D72006307A1 /* Assets.xcassets */,
 				718433511FFB1D2F006307A1 /* OpenCVPort */,
 				7184333E1FFB0D72006307A1 /* Info.plist */,
@@ -112,7 +113,6 @@
 			children = (
 				7184334C1FFB0F24006307A1 /* StickerCamera.mm */,
 				7184334E1FFB0F5D006307A1 /* StickerCamera.h */,
-				7184333B1FFB0D72006307A1 /* LaunchScreen.storyboard */,
 				7184334B1FFB0F23006307A1 /* AlbumFigurinhas-Bridging-Header.h */,
 			);
 			path = OpenCVPort;
