@@ -64,6 +64,9 @@
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="0.67318367960000003" green="0.1007020921" blue="0.005816161167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapResetButton:" destination="ou8-Kc-JxL" eventType="touchUpInside" id="tX1-Vn-2ka"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -77,4 +77,14 @@ class StickerDataProvider {
         
         return sticker
     }
+    
+    
+    // MARK: - Reset
+    func resetSavedStickers(completion: () -> ()) {
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
+
+        completion()
+    }
 }

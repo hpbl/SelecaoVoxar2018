@@ -73,12 +73,18 @@ class StickerPageViewController: UIViewController {
                     titled: sticker.title
                 ) {
                 sticker = fetchedSticker
+                
+            } else {
+                sticker.found = false
             }
             
             let imageView = self.stickersImageView[index]
-            imageView.image = sticker.found
-                ? sticker.image
-                : sticker.image.overlayed(with: #imageLiteral(resourceName: "emptySticker").alpha(0.9))
+            
+            DispatchQueue.main.async {
+                imageView.image = sticker.found
+                    ? sticker.image
+                    : sticker.image.overlayed(with: #imageLiteral(resourceName: "emptySticker").alpha(0.9))
+            }
         }
     }
     
@@ -101,8 +107,6 @@ class StickerPageViewController: UIViewController {
     private func look(for sticker: Sticker) {
         guard !sticker.found else { return }
         
-        print("Looking for sticker \(sticker.title)")
-        
         self.performSegue(
             withIdentifier: "lookForSticker",
             sender: sticker
@@ -120,5 +124,36 @@ class StickerPageViewController: UIViewController {
                 return
             }
         }
+    }
+    
+    
+    // MARK: - Reset
+    @IBAction func tapResetButton(_ sender: Any) {
+        let alertController = UIAlertController(
+            title: "Reset Progress?",
+            message: "Are you sure you want to reset your progress?",
+            preferredStyle: .alert
+        )
+        
+        alertController.addAction(
+            UIAlertAction(
+                title: "No",
+                style: .default,
+                handler: nil
+            )
+        )
+        
+        alertController.addAction(
+            UIAlertAction(
+                title: "Yes",
+                style: .destructive,
+                handler: { _ in
+                    StickerDataProvider.shared.resetSavedStickers() {
+                        self.updateStickerImages()
+                    }
+            })
+        )
+        
+        self.present(alertController, animated: true)
     }
 }
