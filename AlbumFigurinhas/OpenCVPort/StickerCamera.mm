@@ -57,10 +57,10 @@ using namespace std;
     cv::matchTemplate(gimg, gtpl, res, CV_TM_CCOEFF_NORMED);
     cv::threshold(res, res, 0.5, 1., CV_THRESH_TOZERO);
     
-    double minval, maxval, threshold = 0.9;
+    double minval, maxval, threshold = 0.6;
     cv::Point minloc, maxloc;
     cv::minMaxLoc(res, &minval, &maxval, &minloc, &maxloc);
-    
+        
     // If it's a good enough match
     if (maxval >= threshold)
     {

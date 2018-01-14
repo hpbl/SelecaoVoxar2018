@@ -24,8 +24,7 @@ class StickerDataProvider {
         let packNames = [
             "Apps",
             "Radiohead",
-            "Doctor Who?",
-            "Flag",
+            "Graduacao",
             "Justice League"
         ]
         
